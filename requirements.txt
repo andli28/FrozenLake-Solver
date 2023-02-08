@@ -1,7 +1,5 @@
-# Generated with pip freeze > requirements.txt
+# Generated with pipreqs, which only saves packages used in this project
 # Run with pip install -r requirements.txt
 
-cloudpickle==2.2.1
-gym==0.26.2
-gym-notices==0.0.8
+gymnasium==0.27.1
 numpy==1.24.2
