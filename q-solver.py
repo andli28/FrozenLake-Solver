@@ -3,30 +3,33 @@ import gymnasium as gym
 import hyperparam as hp
 
 # Create the environment: https://gymnasium.farama.org/environments/toy_text/frozen_lake/
-env = gym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
+env = gym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False, render_mode="ansi")
 n_observations = env.observation_space.n
 n_actions = env.action_space.n
 
 # Initialize the Q-table to 0
 Q_table = np.zeros((n_observations,n_actions))
-#print(Q_table)
 
 rewards_per_episode = list()
 exploration_proba = hp.exploration_proba # We initialize the exploration proba to hp.exploration_proba
 
+DEBUG = False
 for e in range(hp.n_episodes):
     # We initialize the first state of the episode
     current_state, info = env.reset()
-    # if e % 1000 == 0:
-    #     print(f"Round number {e/1000}")
-    #     print(Q_table)
+    if e % 1000 == 0 and DEBUG:
+        print(f"Round number {e/hp.round_size}")
+        print(np.array_str(Q_table, precision=3, suppress_small=True))
     terminated = False
     truncated = False
     
     # Sum the rewards that the agent gets from the environment
     total_episode_reward = 0
     
-    for i in range(hp.max_iter_episode): 
+    for i in range(hp.max_iter_episode):
+        if e % 1000 == 0 and DEBUG:
+            print(f"Round number {e/hp.round_size}")
+            print(env.render())
         # we sample a float from a uniform distribution over 0 and 1
         # if the sampled flaot is less than the exploration proba
         #     the agent selects a random action
