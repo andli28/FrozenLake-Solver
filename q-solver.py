@@ -3,7 +3,7 @@ import gymnasium as gym
 import hyperparam as hp
 
 # Create the environment: https://gymnasium.farama.org/environments/toy_text/frozen_lake/
-env = gym.make("FrozenLake-v1")
+env = gym.make("FrozenLake-v1", desc=None, map_name="4x4", is_slippery=False)
 n_observations = env.observation_space.n
 n_actions = env.action_space.n
 
@@ -17,8 +17,9 @@ exploration_proba = hp.exploration_proba # We initialize the exploration proba t
 for e in range(hp.n_episodes):
     # We initialize the first state of the episode
     current_state, info = env.reset()
-    if e % 1000 == 0:
-        print(Q_table)
+    # if e % 1000 == 0:
+    #     print(f"Round number {e/1000}")
+    #     print(Q_table)
     terminated = False
     truncated = False
     
