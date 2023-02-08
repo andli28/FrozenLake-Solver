@@ -1,0 +1,7 @@
+# Generated with pip freeze > requirements.txt
+# Run with pip install -r requirements.txt
+
+cloudpickle==2.2.1
+gym==0.26.2
+gym-notices==0.0.8
+numpy==1.24.2
