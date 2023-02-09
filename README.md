@@ -27,13 +27,13 @@ pip install -r requirements.txt
 Run:
 ```bash
 python q-solver.py
+python sarsa.py
 ```
 
 ## TODO
 
-- Make q-solver functional
-- Add SARSA (State–action–reward–state–action)
 - Add Online vs. Offline, and other ways for selecting the next action (mean, max, best action)
+- Look to add DQN, other RL approaches for different types of games
 
 ## Credits
 Inspired by: [`TowardsDataScience`](https://towardsdatascience.com/q-learning-algorithm-from-explanation-to-implementation-cdbeda2ea187)
