@@ -1,5 +1,5 @@
 # FrozenLake Q-Learner
-Implementation of a Q-learner using gymnasium's Frozen Lake environment
+Implementation of a RL Q-learner using `gymnasium`'s Frozen Lake environment
 
 ## Background
 The Q-learning algorithm works well for finite states and actions spaces because - but we store every state-action pair in a table, which requires a huge amount of memory.
@@ -20,4 +20,7 @@ Install requirements:
 pip install -r requirements.txt
 ```
 
-Inspired by: [Link](https://towardsdatascience.com/q-learning-algorithm-from-explanation-to-implementation-cdbeda2ea187)
+## Credits
+Inspired by: [`TowardsDataScience`](https://towardsdatascience.com/q-learning-algorithm-from-explanation-to-implementation-cdbeda2ea187)
+
+Also see: [`GeeksForGeeks: Q-learning in Python`](https://www.geeksforgeeks.org/q-learning-in-python/)
