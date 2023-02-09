@@ -35,7 +35,9 @@ python sarsa.py
 - Add Online vs. Offline, and other ways for selecting the next action (mean, max, best action)
 - Look to add DQN, other RL approaches for different types of games
 
-## Credits
+## References
 Inspired by: [`TowardsDataScience`](https://towardsdatascience.com/q-learning-algorithm-from-explanation-to-implementation-cdbeda2ea187)
 
 Also see: [`GeeksForGeeks: Q-learning in Python`](https://www.geeksforgeeks.org/q-learning-in-python/)
+On-policy vs. Off-policy approaches: [`GeeksForGeeks: SARSA vs. Q-Learning`](https://www.geeksforgeeks.org/sarsa-reinforcement-learning/)
+
