@@ -5,8 +5,8 @@ n_episodes = 10000
 #number of episodes in a round. Therefore, number of rounds is n_episodes/round_size
 round_size = 1000
 
-#maximum number of iteration per episode
-max_iter_episode = 100
+#maximum number of iterations per episode
+max_iter_episode = 1000
 
 ############################# Exploration Hyperparameters #####################################
 #initialize the exploration probability to 1. This is equivalent to "1 - the greedy policy", or how often we explore (epsilon)
@@ -22,5 +22,5 @@ min_exploration_proba = 0.01
 #discounted factor (lambda) Future rewards are less valuable than current rewards so they must be discounted.
 gamma = 0.99
 
-#learning rate (alpha)
+#learning rate (1-alpha)
 lr = 0.1

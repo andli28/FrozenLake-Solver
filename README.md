@@ -8,6 +8,8 @@ The Q-learning algorithm works well for finite states and actions spaces, but we
 
 In the case where states space, actions space or both of them are continuous, it is just impossible to use the Q-learning algorithm.
 
+Note that for Frozen Lakes environments of size 8x8, it becomes more similar to a pathfinding problem, for which RL is actually discouraged and traditional approaches such as A* work better.
+
 ## Installation <a name="installation"></a>
 **Recommended:** Create a virtual environment and activate it ([`Python Documentation`](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/))
 
@@ -20,6 +22,11 @@ Install requirements:
 
 ```bash
 pip install -r requirements.txt
+```
+
+Run:
+```bash
+python q-solver.py
 ```
 
 ## TODO
